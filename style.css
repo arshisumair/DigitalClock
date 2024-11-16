@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:rgb(51, 114, 70);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #66d3b6;
+    padding: 40px 60px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset {
+    padding: 15px 20px;
+    color: #267c65;
+    font-size: 1.5em;
+    background-color: #fff;
+    border: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.reset:focus {
+    color: #fff;
+    background-color: #267c65;
+}
+
+.game {
+    width: 440px;
+    height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #fff;
+    transition: transform 0.25s;
+    cursor: pointer;
+    position: relative;
+}
+
+.item.boxOpen {
+    background-color: #fff;
+    transform: rotateY(0deg);
+}
+
+.item:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #209d7b;
+    opacity: 0.85;
+    transition: transform 0.25s;
+    backface-visibility: hidden;
+}
+
+.item.boxOpen:after {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+#score{
+    width:80px ;
+    font-size :20px; 
+    color:black;
+    background-color:white;
+    
+    
+}
+.score{
+    padding:10px 20px ;
+    color:#151616 ;
+    background-color: #fff;
+    font-size:24px ;
+    margin-left:5px ;
+    border-radius:4px ;
+    cursor: pointer;
+
+}
+
+.timer{
+     padding:10px ;
+     color: black;
+     background-color: #fff;
+     font-size:15px ;
+     cursor: pointer;
+     border-radius: 4px;   
+
+}
